@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account & Data Deletion Request - SIGMA KEY TECH</title>
+  <meta name="description" content="Request the deactivation and deletion of your SIGMA KEY TECH mobile app user profile and associated data logs, complying with Google Play safety standards.">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header-dark">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <img src="assets/images/logo.jpg" alt="SIGMA KEY TECH Logo" class="logo-img">
+        <span class="logo-text logo-text-dark" style="color: #fff;">SIGMA KEY<span> TECH</span></span>
+      </a>
+      
+      <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="navMenu" class="nav-dark">
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#integration">RFID Integration</a></li>
+          <li><a href="index.html#access">Account Access</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="delete-account.html">Data Deletion</a></li>
+          <li><a href="privacy.html" class="nav-btn">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-subtitle">Data Safety Control</span>
+      <h1 class="section-title">Account & Data Deletion</h1>
+      <p style="margin-top: 10px; font-size: 1.1rem; color: var(--color-text-muted);">Complying with Google Play Console policies to let you manage your student safety monitoring profile.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="page-content-wrapper">
+    <div class="container">
+      
+      <div style="max-width: 800px; margin: 0 auto 50px auto; text-align: center;">
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-muted);">
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-muted);">Under the Google Play Developer Account Deletion Policy, if you have an account created in the <strong>Sigma Key Tech</strong> mobile app (developed by <strong>Astfast Infotech Pvt Ltd</strong>), you have the right to request deactivation of your mobile login and deletion of app-cached synchronization profiles.</p>
+        </p>
+      </div>
+
+      <div class="form-card">
+        <div style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border-light);">
+          <h3 style="margin-bottom: 8px; font-size: 1.25rem;">Submit Deletion Request</h3>
+          <p style="font-size: 0.85rem; color: #f95c19; font-weight: 500;">
+            ⚠️ Note: Submitting this request will deactivate your mobile login and unlink your email from the active monitoring system. However, standard administrative school attendance records are maintained by the school system itself at sigmakey.tech for regulatory compliance.
+          </p>
+        </div>
+
+        <form id="deleteAccountForm">
+          <div class="form-group">
+            <label for="parentName">Parent/Guardian Name</label>
+            <input type="text" id="parentName" class="form-control" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="parentEmail">Registered Email Address</label>
+            <input type="email" id="parentEmail" class="form-control" placeholder="Enter the email address to delete" required>
+          </div>
+
+          <div class="form-group">
+            <label for="schoolEnrollment">Enrolled School Name</label>
+            <input type="text" id="schoolEnrollment" class="form-control" placeholder="Enter school name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="studentDetails">Student Details (Name, Class, & Roll No.)</label>
+            <input type="text" id="studentDetails" class="form-control" placeholder="e.g. John Doe, Class 5-A, Roll 22" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reason">Primary Reason for Deletion</label>
+            <select id="reason" class="form-control" required>
+              <option value="" disabled selected>Select a reason...</option>
+              <option value="graduation">Student graduated or left school</option>
+              <option value="privacy">General privacy concerns</option>
+              <option value="no-use">No longer use the mobile app</option>
+              <option value="other">Other reason</option>
+            </select>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="confirmCheckbox" required>
+            <label for="confirmCheckbox">
+              I confirm that I want to deactivate my <strong>Sigma Key Tech</strong> mobile account. I understand that I will lose immediate access to real-time RFID entry/exit tracking alerts and notice boards.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)); box-shadow: 0 4px 15px rgba(249, 92, 25, 0.3);">
+            Initiate Deactivation & Deletion
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div class="modal" id="deletionSuccessModal">
+    <div class="modal-content">
+      <div class="modal-icon" style="background: rgba(249, 92, 25, 0.1); color: var(--color-accent);">✓</div>
+      <h3>Request Received</h3>
+      <p>Your deactivation and deletion request has been submitted. The <strong>Astfast Infotech Pvt Ltd</strong> compliance team will coordinate with your school administration at sigmakey.tech to verify identity details and delete your mobile app synchronization login associations within 7 business days. For follow-up, email <a href="mailto:sigmakeytech@gmail.com">sigmakeytech@gmail.com</a>.</p>
+      <button class="btn btn-primary" id="closeDeletionModalBtn" style="width: 100%;">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-wrapper" style="margin-bottom: 10px;">
+          <img src="assets/images/logo.jpg" alt="SIGMA KEY TECH Logo" class="logo-img" style="background: #fff; padding: 2px;">
+          <span class="logo-text logo-text-dark" style="color: #fff;">SIGMA KEY<span> TECH</span></span>
+        </a>
+        <p class="footer-desc">SIGMA KEY TECH is a comprehensive school attendance monitoring application for parents and guardians. Track student entries/exits, access notices, and view historical logging data.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#integration">RFID Integration</a></li>
+          <li><a href="index.html#access">Account Access</a></li>
+          <li><a href="support.html">Support / Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>App Status</h4>
+        <ul>
+          <li><strong>Developed by:</strong> Astfast Infotech Pvt Ltd</li>
+          <li><strong>For:</strong> Sigma Key Tech</li>
+          <li><strong>Service URL:</strong> sigmakey.tech</li>
+          <li><strong>Landing URL:</strong> astfast.in</li>
+          <li><strong>Status:</strong> Active (Play Store Compliance)</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal & Safety</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="delete-account.html">Data Deletion Request</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sigma Key Tech. App developed by <strong>Astfast Infotech Pvt Ltd</strong>. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="delete-account.html">Account Deletion</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Support & Help - SIGMA KEY TECH</title>
+  <meta name="description" content="Get technical support, read setup FAQs, and contact developers for the SIGMA KEY TECH student monitoring application.">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header-dark">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <img src="assets/images/logo.jpg" alt="SIGMA KEY TECH Logo" class="logo-img">
+        <span class="logo-text logo-text-dark" style="color: #fff;">SIGMA KEY<span> TECH</span></span>
+      </a>
+      
+      <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="navMenu" class="nav-dark">
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#integration">RFID Integration</a></li>
+          <li><a href="index.html#access">Account Access</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="delete-account.html">Data Deletion</a></li>
+          <li><a href="privacy.html" class="nav-btn">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-subtitle">Support Center</span>
+      <h1 class="section-title">Help & Support</h1>
+      <p style="margin-top: 10px; font-size: 1.1rem; color: var(--color-text-muted);">Find answers to common questions or reach out to our technical support team.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="page-content-wrapper">
+    <div class="container">
+      
+      <!-- FAQ Accordion -->
+      <div style="margin-bottom: 80px;">
+        <div class="section-title-wrapper">
+          <span class="section-subtitle">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question">How do I obtain my login credentials?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Parents cannot register accounts directly. Your child's school administration registers your email address in their database at <strong>sigmakey.tech</strong>. You will be provided with a default password for your first login. For security, please update this password inside the mobile app immediately after logging in.
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">I forgot my password. How can I reset it?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                You can trigger a password reset request directly from the login screen of the SIGMA KEY TECH mobile app. A verification email will be sent to your registered address to guide you. Alternatively, you can contact your school's IT support desk to request a temporary login reset through the school portal dashboard.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">My child scanned their RFID card, but I didn't receive a notification. Why?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                The App relies on immediate data synchronization between school gates and the backend server at <strong>sigmakey.tech</strong>. If notification delays occur, it is usually due to temporary school network internet connectivity issues or your mobile data connection. Open the app to view the active logs manually, which will fetch the latest database updates directly.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">What are the three notice board categories?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                School bulletins are structured visually into:
+                <ul>
+                  <li><strong>Academic:</strong> Homework bulletins, exam timetables, report cards.</li>
+                  <li><strong>Events:</strong> Sports days, holiday notices, parent-teacher meetings.</li>
+                  <li><strong>Emergency:</strong> Unplanned school closures, urgent weather warnings, or security alerts.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question">Does the App track my child's location via GPS?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                No. The SIGMA KEY TECH app does not use background GPS tracking or geographical tracking on your child's phone. It operates strictly through physical RFID readers located at school entry and exit points. This guarantees high battery efficiency and robust privacy for both students and teachers.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Support Form -->
+      <div>
+        <div class="section-title-wrapper" style="margin-bottom: 40px;">
+          <span class="section-subtitle">Reach Out</span>
+          <h2 class="section-title">Contact Support Desk</h2>
+          <p class="section-desc">Are you experiencing issues logging in, syncing student logs, or setting up portal links? Send a message below or email us directly at <a href="mailto:sigmakeytech@gmail.com"><strong>sigmakeytech@gmail.com</strong></a>.</p>
+        </div>
+
+        <div class="form-card">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Registered Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter the email registered with school" required>
+            </div>
+
+            <div class="form-group">
+              <label for="school">School Name</label>
+              <input type="text" id="school" class="form-control" placeholder="Enter enrolled school name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control" placeholder="What can we help you with?" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Detailed Description</label>
+              <textarea id="message" class="form-control" placeholder="Describe your technical issue or inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Support Ticket</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <div class="modal-icon">✓</div>
+      <h3>Support Ticket Submitted</h3>
+      <p>Thank you! Your inquiry has been forwarded to the <strong>Sigma Key Tech</strong> support team at <strong>Astfast Infotech Pvt Ltd</strong>. We will review your query and respond to your registered email shortly.</p>
+      <button class="btn btn-primary" id="closeModalBtn" style="width: 100%;">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-wrapper" style="margin-bottom: 10px;">
+          <img src="assets/images/logo.jpg" alt="SIGMA KEY TECH Logo" class="logo-img" style="background: #fff; padding: 2px;">
+          <span class="logo-text logo-text-dark" style="color: #fff;">SIGMA KEY<span> TECH</span></span>
+        </a>
+        <p class="footer-desc">SIGMA KEY TECH is a comprehensive school attendance monitoring application for parents and guardians. Track student entries/exits, access notices, and view historical logging data.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#integration">RFID Integration</a></li>
+          <li><a href="index.html#access">Account Access</a></li>
+          <li><a href="support.html">Support / Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>App Status</h4>
+        <ul>
+          <li><strong>Developed by:</strong> Astfast Infotech Pvt Ltd</li>
+          <li><strong>For:</strong> Sigma Key Tech</li>
+          <li><strong>Service URL:</strong> sigmakey.tech</li>
+          <li><strong>Landing URL:</strong> astfast.in</li>
+          <li><strong>Status:</strong> Active (Play Store Compliance)</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal & Safety</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="delete-account.html">Data Deletion Request</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sigma Key Tech. App developed by <strong>Astfast Infotech Pvt Ltd</strong>. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="delete-account.html">Account Deletion</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

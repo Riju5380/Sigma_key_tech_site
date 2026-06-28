@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGMA KEY TECH - Student Safety & Monitoring App</title>
+  <meta name="description" content="SIGMA KEY TECH is a real-time student monitoring and safety app for parents, featuring RFID attendance tracking, entry/exit logs, and school notices.">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <img src="assets/images/logo.jpg" alt="SIGMA KEY TECH Logo" class="logo-img">
+        <span class="logo-text">SIGMA KEY<span> TECH</span></span>
+      </a>
+      
+      <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#integration">RFID Integration</a></li>
+          <li><a href="#access">Account Access</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="delete-account.html">Data Deletion</a></li>
+          <li><a href="privacy.html" class="nav-btn">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Student Safety & Monitoring System</span>
+        <h1 class="hero-title">Your Child's Safety, <span>Just a Tap Away.</span></h1>
+        <p class="hero-desc">SIGMA KEY TECH connects parents directly with the school's attendance portal, offering real-time RFID entry/exit notifications, academic notices, and detailed history tracking.</p>
+        <div class="hero-cta">
+          <a href="#access" class="btn btn-primary">Get Access Details</a>
+          <a href="support.html" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-mockup">
+        <!-- Visual Phone Screen Mockup of App -->
+        <div class="phone-frame" style="border-color: #2a2d3e; background: #12141c;">
+          <div class="phone-notch" style="background: #2a2d3e;"></div>
+          <div class="phone-screen" style="padding: 0; overflow: hidden; background: #12141c; position: relative;">
+
+            <!-- Status Bar -->
+            <div style="display:flex; justify-content:space-between; align-items:center; padding: 10px 14px 4px; font-size: 0.6rem; color: #aaa;">
+              <span style="font-weight:700;">8:42</span>
+              <span style="font-size:0.7rem;">📶 🔋</span>
+            </div>
+
+            <!-- App Top Bar -->
+            <div style="display:flex; justify-content:space-between; align-items:center; padding: 2px 14px 10px;">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:1.1rem;">🎓</span>
+                <span style="font-size: 0.82rem; font-weight: 700; color: #fff; line-height:1.25;">Demo Public<br>High School</span>
+              </div>
+              <span style="font-size: 1rem; color: #aaa;">🔔</span>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div style="overflow-y: auto; height: calc(100% - 108px); padding: 0 10px 8px;">
+
+              <!-- Student Selector Card -->
+              <div style="background:#1e2130; border-radius:12px; padding:10px 12px; display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#7c3aed,#a855f7); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.75rem; color:#fff; flex-shrink:0;">DS</div>
+                <div style="flex:1;">
+                  <div style="font-size:0.55rem; color:#888; text-transform:uppercase; letter-spacing:0.5px;">Selected Student</div>
+                  <div style="font-size:0.85rem; font-weight:700; color:#fff;">Demo Student</div>
+                </div>
+                <span style="color:#888; font-size:0.9rem;">⌄</span>
+              </div>
+
+              <!-- Monthly Summary Card -->
+              <div style="background:#1e2130; border-radius:12px; padding:12px; margin-bottom:10px;">
+                <div style="font-size:0.55rem; color:#888; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:10px;">Monthly Summary &bull; 0 Working Days</div>
+                <div style="display:flex; justify-content:space-around; text-align:center;">
+                  <div>
+                    <div style="font-size:1.3rem; font-weight:800; color:#fff;">0%</div>
+                    <div style="font-size:0.55rem; color:#888; text-transform:uppercase; margin-top:2px;">Overall</div>
+                  </div>
+                  <div>
+                    <div style="font-size:1.3rem; font-weight:800; color:#10b981;">0</div>
+                    <div style="font-size:0.55rem; color:#888; text-transform:uppercase; margin-top:2px;">Present</div>
+                  </div>
+                  <div>
+                    <div style="font-size:1.3rem; font-weight:800; color:#f95c19;">0</div>
+                    <div style="font-size:0.55rem; color:#888; text-transform:uppercase; margin-top:2px;">Absent</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Today's Attendance Header -->
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:7px;">
+                <span style="font-size:0.6rem; font-weight:700; color:#ccc; text-transform:uppercase; letter-spacing:0.5px;">Today's Attendance</span>
+                <span style="font-size:0.6rem; color:#008be5; font-weight:600;">&#128197; Change Date</span>
+              </div>
+
+              <!-- Holiday Card -->
+              <div style="background:#1e2130; border-radius:10px; padding:10px 12px; margin-bottom:10px; display:flex; align-items:center; gap:8px; border-left:3px solid #f95c19;">
+                <div style="width:28px; height:28px; background:#2a1a1a; border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0;">&#127881;</div>
+                <div style="flex:1;">
+                  <div style="display:flex; align-items:center; gap:5px; margin-bottom:2px;">
+                    <span style="font-size:0.75rem; font-weight:700; color:#fff;">Jun 28, 2026</span>
+                    <span style="background:#2563eb; color:#fff; font-size:0.48rem; font-weight:700; padding:1px 4px; border-radius:3px; text-transform:uppercase;">Today</span>
+                  </div>
+                  <div style="font-size:0.65rem; color:#f95c19; font-weight:600;">Sunday: Weekly Holiday</div>
+                </div>
+                <span style="background:#ef4444; color:#fff; font-size:0.5rem; font-weight:700; padding:3px 6px; border-radius:4px; text-transform:uppercase; white-space:nowrap;">Holiday</span>
+              </div>
+
+              <!-- Academic Calendar -->
+              <div style="background:#1e2130; border-radius:12px; padding:12px;">
+                <div style="font-size:0.55rem; color:#888; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;">Academic Calendar</div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                  <span style="font-size:0.85rem; font-weight:700; color:#fff;">June 2026</span>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <span style="color:#aaa; font-size:0.75rem; cursor:pointer;">&#8249;</span>
+                    <span style="color:#008be5; font-size:0.62rem; font-weight:600;">Select &#9662;</span>
+                    <span style="color:#aaa; font-size:0.75rem; cursor:pointer;">&#8250;</span>
+                  </div>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(7,1fr); text-align:center; row-gap:5px;">
+                  <div style="font-size:0.52rem; color:#666; padding-bottom:2px;">Sun</div>
+                  <div style="font-size:0.52rem; color:#666; padding-bottom:2px;">Mon</div>
+                  <div style="font-size:0.52rem; color:#666; padding-bottom:2px;">Tue</div>
+                  <div style="font-size:0.52rem; color:#666; padding-bottom:2px;">Wed</div>
+                  <div style="font-size:0.52rem; color:#666; padding-bottom:2px;">Thu</div>
+                  <div style="font-size:0.52rem; color:#666; padding-bottom:2px;">Fri</div>
+                  <div style="font-size:0.52rem; color:#666; padding-bottom:2px;">Sat</div>
+                  <!-- Week 1 -->
+                  <div></div>
+                  <div style="font-size:0.62rem;color:#ddd;">1</div>
+                  <div style="font-size:0.62rem;color:#ddd;">2</div>
+                  <div style="font-size:0.62rem;color:#ddd;">3</div>
+                  <div style="font-size:0.62rem;color:#ddd;">4</div>
+                  <div style="font-size:0.62rem;color:#ddd;">5</div>
+                  <div style="font-size:0.62rem;color:#94a3b8;">6</div>
+                  <!-- Week 2 -->
+                  <div style="display:flex;align-items:center;justify-content:center;"><span style="font-size:0.6rem;background:#ef4444;color:#fff;border-radius:50%;width:17px;height:17px;display:flex;align-items:center;justify-content:center;font-weight:700;">7</span></div>
+                  <div style="font-size:0.62rem;color:#ddd;">8</div>
+                  <div style="font-size:0.62rem;color:#ddd;">9</div>
+                  <div style="font-size:0.62rem;color:#ddd;">10</div>
+                  <div style="font-size:0.62rem;color:#ddd;">11</div>
+                  <div style="font-size:0.62rem;color:#ddd;">12</div>
+                  <div style="font-size:0.62rem;color:#94a3b8;">13</div>
+                  <!-- Week 3 -->
+                  <div style="display:flex;align-items:center;justify-content:center;"><span style="font-size:0.6rem;background:#ef4444;color:#fff;border-radius:50%;width:17px;height:17px;display:flex;align-items:center;justify-content:center;font-weight:700;">14</span></div>
+                  <div style="font-size:0.62rem;color:#ddd;">15</div>
+                  <div style="font-size:0.62rem;color:#ddd;">16</div>
+                  <div style="font-size:0.62rem;color:#ddd;">17</div>
+                  <div style="font-size:0.62rem;color:#ddd;">18</div>
+                  <div style="font-size:0.62rem;color:#ddd;">19</div>
+                  <div style="font-size:0.62rem;color:#94a3b8;">20</div>
+                  <!-- Week 4 -->
+                  <div style="display:flex;align-items:center;justify-content:center;"><span style="font-size:0.6rem;background:#ef4444;color:#fff;border-radius:50%;width:17px;height:17px;display:flex;align-items:center;justify-content:center;font-weight:700;">21</span></div>
+                  <div style="font-size:0.62rem;color:#ddd;">22</div>
+                  <div style="font-size:0.62rem;color:#ddd;">23</div>
+                  <div style="font-size:0.62rem;color:#ddd;">24</div>
+                  <div style="font-size:0.62rem;color:#ddd;">25</div>
+                  <div style="font-size:0.62rem;color:#ddd;">26</div>
+                  <div style="font-size:0.62rem;color:#94a3b8;">27</div>
+                  <!-- Week 5: 28 = TODAY + holiday -->
+                  <div style="display:flex;align-items:center;justify-content:center;"><span style="font-size:0.6rem;background:#ef4444;color:#fff;border-radius:5px;width:17px;height:17px;display:flex;align-items:center;justify-content:center;font-weight:700;border:2px solid #ff8080;box-sizing:border-box;">28</span></div>
+                  <div style="font-size:0.62rem;color:#ddd;">29</div>
+                  <div style="font-size:0.62rem;color:#ddd;">30</div>
+                  <div></div><div></div><div></div><div></div>
+                </div>
+                <!-- Legend -->
+                <div style="display:flex;justify-content:center;gap:12px;margin-top:10px;padding-top:8px;border-top:1px solid #2a2d3e;">
+                  <div style="display:flex;align-items:center;gap:4px;"><span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block;"></span><span style="font-size:0.55rem;color:#aaa;">Present</span></div>
+                  <div style="display:flex;align-items:center;gap:4px;"><span style="width:7px;height:7px;border-radius:50%;background:#f59e0b;display:inline-block;"></span><span style="font-size:0.55rem;color:#aaa;">Absent</span></div>
+                  <div style="display:flex;align-items:center;gap:4px;"><span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block;"></span><span style="font-size:0.55rem;color:#aaa;">Holiday</span></div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom Navigation Bar -->
+            <div style="position:absolute; bottom:0; left:0; right:0; background:#1a1d2e; border-top:1px solid #2a2d3e; display:flex; justify-content:space-around; padding:7px 0 9px;">
+              <div style="display:flex; flex-direction:column; align-items:center; gap:2px;">
+                <div style="background:#008be5; border-radius:9px; padding:4px 12px; font-size:0.8rem;">&#128197;</div>
+                <span style="font-size:0.5rem; color:#008be5; font-weight:700;">Attendance</span>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:2px; padding-top:4px;">
+                <span style="font-size:0.8rem;">&#128276;</span>
+                <span style="font-size:0.5rem; color:#555;">Notifications</span>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:2px; padding-top:4px;">
+                <span style="font-size:0.8rem;">&#128226;</span>
+                <span style="font-size:0.5rem; color:#555;">Notices</span>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:2px; padding-top:4px;">
+                <span style="font-size:0.8rem;">&#128100;</span>
+                <span style="font-size:0.5rem; color:#555;">Profile</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section-padding" id="features" style="background-color: #fff;">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Features</span>
+        <h2 class="section-title">Designed with Parent Peace of Mind in Mind</h2>
+        <p class="section-desc">SIGMA KEY TECH extends the school's attendance portal, giving you access to critical security and informational tools from your smartphone.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3>Real-Time RFID Entry/Exit</h3>
+          <p>Instantly receive notifications showing exactly when your child enters or leaves the school premises, logged via advanced physical RFID reader gates.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3>Complete Attendance History</h3>
+          <p>Access a comprehensive calendar and logging log of previous school attendance. Easily identify past attendance patterns and check active verification logs.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <h3>Categorized School Notices</h3>
+          <p>Never miss a school update. The dashboard organizes school announcements into 3 visual categories: <strong>Academic</strong>, <strong>Events</strong>, and <strong>Emergency Alerts</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration / How Portal Works -->
+  <section class="section-padding theme-dark-section integration" id="integration">
+    <div class="container integration-grid">
+      <div class="integration-visual">
+        <div class="network-container">
+          <!-- RFID Card Reader -->
+          <div class="network-node node-rfid">
+            <span class="node-icon">🔑</span>
+            RFID Gate
+          </div>
+          <!-- Server -->
+          <div class="network-node node-server">
+            <span class="node-icon">🖥️</span>
+            Portal Server
+          </div>
+          <!-- Mobile App -->
+          <div class="network-node node-app">
+            <span class="node-icon">📱</span>
+            App User
+          </div>
+          <!-- Connecting Lines & Signals -->
+          <div class="network-line line-1-2">
+            <div class="network-signal signal-forward"></div>
+          </div>
+          <div class="network-line line-2-3">
+            <div class="network-signal signal-backward"></div>
+          </div>
+        </div>
+      </div>
+      <div class="integration-content">
+        <span class="section-subtitle">System Architecture</span>
+        <h2 class="section-title section-title-white">Secure Portal Continuity</h2>
+        <p>The SIGMA KEY TECH mobile app is a direct extension of your school's attendance management system. The core database and control dashboard are hosted at our secure server domain:</p>
+        <div class="domain-pill">sigmakey.tech</div>
+        <p>When students or teachers tap their RFID school IDs on physical readers at school checkpoints, the local reader immediately synchronizes the timestamp with the backend server. The app communicates with this server via secure private APIs, fetching the logs and notices immediately for parents.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Account Access Instructions -->
+  <section class="section-padding" id="access" style="background-color: var(--color-bg-light);">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Account Setup</span>
+        <h2 class="section-title">How Do Parents Gain Access?</h2>
+        <p class="section-desc">To protect student privacy, there are no public sign-ups on the mobile app. All account management is tightly integrated with the school portal.</p>
+      </div>
+
+      <div class="guide-grid">
+        <!-- Step 1 -->
+        <div class="guide-step">
+          <div class="step-num">1</div>
+          <h3>School Enrollment</h3>
+          <p>Your child's school administration registers your email address directly in their database via the school control dashboard at <strong>sigmakey.tech</strong>.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="guide-step">
+          <div class="step-num">2</div>
+          <h3>Initial Temporary Login</h3>
+          <p>Once registered, a secure default temporary password is automatically provisioned for your first login. Log into the app using your email and temporary password.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="guide-step">
+          <div class="step-num">3</div>
+          <h3>Password Update</h3>
+          <p>For security, you will be prompted to update your password immediately within the app. Subsequent logins will securely require your custom password.</p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 50px;">
+        <p style="font-size: 0.95rem; font-weight: 500; color: var(--color-text-muted);">
+          Authentication requests are securely routed directly to the primary database server at <code style="background: rgba(0, 139, 229, 0.05); padding: 2px 6px; border-radius: 4px; color: var(--color-primary-dark);">sigmakey.tech</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-wrapper" style="margin-bottom: 10px;">
+          <img src="assets/images/logo.jpg" alt="SIGMA KEY TECH Logo" class="logo-img" style="background: #fff; padding: 2px;">
+          <span class="logo-text logo-text-dark" style="color: #fff;">SIGMA KEY<span> TECH</span></span>
+        </a>
+        <p class="footer-desc">SIGMA KEY TECH is a comprehensive school attendance monitoring application for parents and guardians. Track student entries/exits, access notices, and view historical logging data.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#integration">RFID Integration</a></li>
+          <li><a href="#access">Account Access</a></li>
+          <li><a href="support.html">Support / Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>App Status</h4>
+        <ul>
+          <li><strong>Developed by:</strong> Astfast Infotech Pvt Ltd</li>
+          <li><strong>For:</strong> Sigma Key Tech</li>
+          <li><strong>Service URL:</strong> sigmakey.tech</li>
+          <li><strong>Landing URL:</strong> astfast.in</li>
+          <li><strong>Status:</strong> Active (Play Store Compliance)</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal & Safety</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="delete-account.html">Data Deletion Request</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sigma Key Tech. App developed by <strong>Astfast Infotech Pvt Ltd</strong>. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="delete-account.html">Account Deletion</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
